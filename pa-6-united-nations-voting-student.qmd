@@ -77,6 +77,7 @@ Here is each data set and its description (you might want to look at the Tidy Tu
 
 ```{r}
 unvotes <- read_csv("data/unvotes.csv")
+unvotes
 ```
 
 
@@ -135,22 +136,22 @@ Comment on the following code, what is happening in each line?  One way to appro
 ```{r}
 unvotes |> 
   count(country, vote) |> # counts number of cases
-  group_by(country) |> # 
-  mutate(total = sum(n)) |> #comment 
-  mutate(prop_vote = n/total) |> #comment
+  group_by(country) |> # Groups data by country
+  mutate(total = sum(n)) |> #Creates new column with the total sum of votes per country
+  mutate(prop_vote = n/total) |> #Creates new column with total number of votes per country out of total votes within the united nations, Proportion of Votes
   filter(country %in% c("United States", "Canada", 
                         "Germany", "France",
                         "Italy", "Japan",
-                        "United Kingdom")) |> #comment
+                        "United Kingdom")) |> #Focuses on these countries only
   ggplot(aes(x = country, y = prop_vote, 
              fill = vote)) + # creates boxplot
-  geom_col(position = position_stack()) + #comment
+  geom_col(position = position_stack()) + #It makes the height of data different values in the dataset, Variables all fall into the same stack 
   labs(x = "Group of Seven Countries",
        y = "Proportion of Votes",
        title = "Voting Record of the G7",
-       fill = "Vote") + #comment
-  theme_minimal() +  #comment
-  scale_fill_viridis_d(end = 0.8) + #comment
+       fill = "Vote") + #Labels graph, fills in the Vote variable different colors
+  theme_minimal() +  #Theme of Graph
+  scale_fill_viridis_d(end = 0.8) + #Makes colors easier for Black and White as well as easier for people with common colorblindness
   coord_flip() # flips graph view to vertical/horizontal position
 ```
 
