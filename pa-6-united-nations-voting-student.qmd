@@ -235,7 +235,7 @@ dim(roll_calls)
 ```
 
 
-> Insert Answer Here
+> Because there are more areas for people to vote on in the roll calls area, people might feel more pressured to vote on more items, compared to the Issues area that is more specific and less broad. Roll Calls area has more variables for people to vote on compared to issues that only has 9. 
 
 
 
