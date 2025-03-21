@@ -134,8 +134,8 @@ Comment on the following code, what is happening in each line?  One way to appro
 
 ```{r}
 unvotes |> 
-  count(country, vote) |> #comment
-  group_by(country) |> #comment
+  count(country, vote) |> # counts number of cases
+  group_by(country) |> # 
   mutate(total = sum(n)) |> #comment 
   mutate(prop_vote = n/total) |> #comment
   filter(country %in% c("United States", "Canada", 
@@ -143,7 +143,7 @@ unvotes |>
                         "Italy", "Japan",
                         "United Kingdom")) |> #comment
   ggplot(aes(x = country, y = prop_vote, 
-             fill = vote)) + #comment
+             fill = vote)) + # creates boxplot
   geom_col(position = position_stack()) + #comment
   labs(x = "Group of Seven Countries",
        y = "Proportion of Votes",
@@ -151,7 +151,7 @@ unvotes |>
        fill = "Vote") + #comment
   theme_minimal() +  #comment
   scale_fill_viridis_d(end = 0.8) + #comment
-  coord_flip() #comment
+  coord_flip() # flips graph view to vertical/horizontal position
 ```
 
 > Describe what the graph above demonstrates above UN voting records for the G7 
