@@ -194,7 +194,7 @@ roll_calls |>
 
 What information is missing from the above graphic that might be useful in understanding the issues the UN commonly votes on?
 
-> Insert Answer Here
+> Country data is missing. It is crucial because we want to know which countries voted and for what they voted in order to fully assess and understand the issues UN casts votes for. 
 
 
 
