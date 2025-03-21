@@ -1,6 +1,6 @@
 ---
 title: "United Nations Voting Records"
-author: "The names of your group members go here!"
+author: "Ericka Quintero, Jhoana"
 format: 
   html: default
   gfm: default
@@ -156,6 +156,7 @@ unvotes |>
 ```
 
 > Describe what the graph above demonstrates above UN voting records for the G7 
+>
   
   
   
