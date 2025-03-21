@@ -156,11 +156,10 @@ unvotes |>
 ```
 
 > Describe what the graph above demonstrates above UN voting records for the G7 
-> Description
+> Description of the total vote, showing proportion of how each country voted. 
   
   
-  
-  
+
 
 <!-- Swap roles -- Developer becomes Coder, Coder becomes Developer! -->
 
