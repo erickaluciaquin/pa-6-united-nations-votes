@@ -172,12 +172,10 @@ The second data set, `roll_calls` has more information on the type of vote, the 
 
 ```{r}
 roll_calls |> 
-  distinct(short)
+  distinct(short) # removes rows with duplicate values from data frame
 ```
 
-> Description of code results
-
-
+> Display of character values under "short" column of duplicated values from data frame. 
 
 We can use the individual data for `roll_calls` to look at the number of votes per year over time.
 
@@ -186,7 +184,7 @@ roll_calls |>
   mutate(year = lubridate::year(date)) |> #extracts the year from the date value and creates a new `year` column
   count(year) |> #counts how many votes there were per year assuming each line is an single voting instance
   ggplot(aes(x = year, y = n)) +
-  geom_line() +
+  geom_line() + # linear trend line
   labs(x = "Year", y = "Number of Votes",
        title = "UN Votes per Year") +
   theme_minimal()
